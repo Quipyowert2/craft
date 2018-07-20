@@ -1,0 +1,12 @@
+xfile.cc:6: file_selector.h: No such file or directory
+xfile.cc:7: masks.h: No such file or directory
+xfile.cc: In function `void f_open_with_extend(struct _iobuf *&, char *, char *, int)':
+xfile.cc:101: warning: implicit declaration of function `int errorstop(...)'
+xfile.cc: In function `int sel_get_name(char *, char *, char *, char *)':
+xfile.cc:198: `file_selector' undeclared (first use this function)
+xfile.cc:198: (Each undeclared identifier is reported only once
+xfile.cc:198: for each function it appears in.)
+xfile.cc:198: `fsel' undeclared (first use this function)
+xfile.cc:202: parse error before `('
+xfile.cc:214: type `<error>' argument given to `delete', expected pointer
+xfile.cc:241: warning: implicit declaration of function `int yes(...)'

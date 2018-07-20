@@ -1,0 +1,7 @@
+#
+gcc -o hhh hcc.cc
+hhh -compiler gcc -o hcc hcc
+rm -f hhh
+
+
+

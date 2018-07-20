@@ -1,0 +1,315 @@
+#======================================================================#
+#= CHANGES AND UPDATES                                                =#
+#======================================================================#
+#= date   person file       subject                                   =#
+#=--------------------------------------------------------------------=#
+#=                                                                    =#
+#= 204093 hua    Makefile   created                                   =#
+#=             							      =#
+#======================================================================#
+
+
+.KEEP_STATE:
+
+.SUFFIXES: .a .batch .hc .x .inc .lib .o .pre .shell .h
+
+
+#
+#	include directories:
+#
+
+GCC_EXEC=/vol/src/ArchiveTape/gnu/gcc-2.5.8/bin/gcc
+
+CPPFLAGS= \
+	-I/home/janus/includes  \
+	-I/vol/X11R5/include \
+	-I/vol/src/ArchiveTape/gnu/gcc-2.5.8/include 
+#
+#	optimization flags:
+#
+
+CFLAGS_OPTIM = \
+	-O2 \
+	-fexpensive-optimizations \
+	-finline-functions
+
+CFLAGS_G = \
+	-g
+
+CFLAGS_P = \
+	-pg
+
+#
+#	link directories:
+#
+
+LDFLAGS = \
+	-L/vol/X11R5/lib \
+	-L$(CWD) \
+	-L/vol/src/ArchiveTape/gnu/gcc-2.5.8/lib 
+
+#
+#	default libraries:
+#
+
+LDLIBS0	= \
+	-lX11 \
+	-lreadline \
+	-ltermcap \
+	-lg++2 \
+	-lm
+
+
+#
+#	default choices (optimized janus) :
+#
+
+CFLAGS	= $(CFLAGS_OPTIM)
+LDLIBS	= $(LDLIBS0)
+
+.shell.h:
+	/home/janus/bin/dumh $*
+	rm -f $(DEMOO)
+	    
+.batch.o: 
+	preprocess.pre $*
+	@rm -f $*.wrn
+	/home/janus/bin/refine -CODE $(GCC_EXEC) $(CFLAGS) -pipe $(CPPFLAGS) -c $*
+	@rm -f $*.err
+
+.hc.pre:
+	/home/janus/bin/refine -CODE $(GCC_EXEC) -o $*.pre $*
+	@rm -f $(DEMOO)
+
+.hc.o:  
+	@rm -f $*.wrn
+	/home/janus/bin/refine  -CODE $(GCC_EXEC) $(CFLAGS) -pipe $(CPPFLAGS) -c $*
+	@rm -f $*.err
+
+.hc.cc:  
+	@echo WARNING! compiling .hc to .cc
+
+.c.o:	
+	@echo WARNING! want to compile .c
+
+.cc.o:	
+	@echo WARNING! want to compile .cc
+
+# PRINTER = c5-141g
+
+	
+OBJS = \
+	audio.o \
+	xbm.o \
+	cmap_edit.o \
+	cmap.o \
+	sound.o \
+	ppm.o \
+	compress.o \
+	table_operations.o \
+	collist.o \
+	table.o \
+	timer.o \
+	xmath.o \
+	io.o \
+	cry.o \
+	signals.o \
+	win.o \
+	dial.o \
+	multi_dial.o \
+	menu.o \
+	xsystem.o \
+	xfile.o \
+	ppm_handler.o \
+	errorhandling.o \
+	paramreader.o \
+	pattern_match.o \
+	effects.o \
+	objects.o \
+	xstring.o \
+	id_handler.o \
+	masks.o \
+	buttons.o \
+	lru.o \
+	scroller.o \
+	selector.o \
+	getline.o \
+	file_selector.o \
+	history.o \
+	html_edit.o \
+	morph.o \
+	morph_edit.o
+
+
+SRCS = \
+	$(TOOLS) $(FRAME)
+
+TOOLS = \
+	land.h \
+	land.hc \
+	xbm.h \
+	xbm.hc \
+	html_edit.h \
+	html_edit.hc \
+	cmap_edit.h \
+	cmap_edit.hc \
+	cmap.h \
+	cmap.hc \
+	sound.h \
+	sound.hc \
+	ppm.h \
+	ppm.hc \
+	compress.h \
+	compress.hc \
+	effects.h \
+	effects.hc \
+	signals.h \
+	signals.hc \
+	pattern_match.h \
+	pattern_match.hc \
+	morph.h \
+	morph.hc \
+	morph_edit.h \
+	morph_edit.hc
+
+
+FRAME = \
+	audio.h \
+	audio.hc \
+	buttons.h \
+	buttons.hc \
+	cry.h \
+	cry.hc \
+	errorhandling.h \
+	errorhandling.hc \
+	id_handler.h \
+	id_handler.hc\
+	io.h \
+	io.hc \
+	masks.h \
+	masks.hc \
+	menu.h \
+	menu.hc \
+	scroller.h \
+	scroller.hc \
+	selector.h \
+	selector.hc \
+	getline.h \
+	getline.hc \
+	file_selector.h \
+	file_selector.hc \
+	history.h \
+	history.hc \
+	objects.h \
+	objects.hc \
+	overview \
+	paramreader.h \
+	paramreader.hc \
+	table_operations.h \
+	table_operations.hc \
+	collist.h \
+	collist.hc \
+	table.h \
+	table.hc \
+	timer.h \
+	timer.hc \
+	win.h \
+	win.hc \
+	dial.h \
+	dial.hc \
+	multi_dial.h \
+	multi_dial.hc \
+	ppm_handler.h \
+	ppm_handler.hc \
+	xsystem.h \
+	xsystem.hc \
+	xfile.h \
+	xfile.hc \
+	xmath.h \
+	xmath.hc \
+	xstring.h \
+	xstring.hc \
+	lru.h \
+	lru.hc \
+	list.h \
+	list.hc 
+
+
+TARGETS	= $(SRCS) $(OBJS) test.o
+
+
+test1:   	$(BATCH) $(SRCS)  test1.hc $(OBJS) test1.o
+		$(GCC_EXEC) $(CFLAGS) $(LDFLAGS) -o test1  \
+		$(BINDING) $(OBJS) test1.o $(LDLIBS)
+
+test2:   	$(BATCH) $(SRCS)  test2.hc $(OBJS) test2.o
+		$(GCC_EXEC) $(CFLAGS) $(LDFLAGS) -o test2  \
+		$(BINDING) $(OBJS) test2.o $(LDLIBS)
+
+test:   	$(BATCH) $(SRCS)  test.hc $(OBJS) test.o
+		$(GCC_EXEC) $(CFLAGS) $(LDFLAGS) -o test  \
+		$(BINDING) $(OBJS) test.o $(LDLIBS)
+
+wwwtouch:   	$(BATCH) $(SRCS)  wwwtouch.hc $(OBJS) wwwtouch.o
+		$(GCC_EXEC) $(CFLAGS) $(LDFLAGS) -o wwwtouch  \
+		$(BINDING) $(OBJS) wwwtouch.o $(LDLIBS)
+
+hmorph:   	$(BATCH) $(SRCS)  hmorph.hc $(OBJS) hmorph.o
+		$(GCC_EXEC) $(CFLAGS) $(LDFLAGS) -o hmorph  \
+		$(BINDING) $(OBJS) hmorph.o $(LDLIBS)
+
+hmorph:   	$(BATCH) $(SRCS)  hmorph.hc $(OBJS) hmorph.o
+		$(GCC_EXEC) $(CFLAGS) $(LDFLAGS) -o hmorph  \
+		$(BINDING) $(OBJS) hmorph.o $(LDLIBS)
+
+hcomp:   	$(BATCH) $(SRCS)  hcomp.hc $(OBJS) hcomp.o
+		$(GCC_EXEC) $(CFLAGS) $(LDFLAGS) -o hcomp  \
+		$(BINDING) $(OBJS) hcomp.o $(LDLIBS)
+
+hmedit:   	$(BATCH) $(SRCS)  hmedit.hc $(OBJS) hmedit.o
+		$(GCC_EXEC) $(CFLAGS) $(LDFLAGS) -o hmedit  \
+		$(BINDING) $(OBJS) hmedit.o $(LDLIBS)
+
+htmledit:   	$(BATCH) $(SRCS)  htmledit.hc $(OBJS) htmledit.o
+		$(GCC_EXEC) $(CFLAGS) $(LDFLAGS) -o htmledit  \
+		$(BINDING) $(OBJS) htmledit.o $(LDLIBS)
+
+overlay:   	$(BATCH) $(SRCS)  overlay.hc $(OBJS) overlay.o
+		$(GCC_EXEC) $(CFLAGS) $(LDFLAGS) -o overlay  \
+		$(BINDING) $(OBJS) overlay.o $(LDLIBS)
+
+doublelay:   	$(BATCH) $(SRCS)  doublelay.hc $(OBJS) doublelay.o
+		$(GCC_EXEC) $(CFLAGS) $(LDFLAGS) -o doublelay  \
+		$(BINDING) $(OBJS) doublelay.o $(LDLIBS)
+
+mad:	   	$(BATCH) $(SRCS)  mad.hc $(OBJS) mad.o
+		$(GCC_EXEC) $(CFLAGS) $(LDFLAGS) -o mad  \
+		$(BINDING) $(OBJS) mad.o $(LDLIBS)
+
+xcopy:   	$(BATCH) $(SRCS)  xcopy.hc $(OBJS) xcopy.o
+		$(GCC_EXEC) $(CFLAGS) $(LDFLAGS) -o xcopy  \
+		$(BINDING) $(OBJS) xcopy.o $(LDLIBS)
+xrm:	   	$(BATCH) $(SRCS)  xrm.hc $(OBJS) xrm.o
+		$(GCC_EXEC) $(CFLAGS) $(LDFLAGS) -o xrm  \
+		$(BINDING) $(OBJS) xrm.o $(LDLIBS)
+
+cmedit:   	$(BATCH) $(SRCS)  cmedit.hc $(OBJS) cmedit.o
+		$(GCC_EXEC) $(CFLAGS) $(LDFLAGS) -o cmedit  \
+		$(BINDING) $(OBJS) cmedit.o $(LDLIBS)
+
+hcc:	   	$(BATCH) $(SRCS)  hcc.hc $(OBJS) hcc.o
+		$(GCC_EXEC) $(CFLAGS) $(LDFLAGS) -o hcc  \
+		$(BINDING) $(OBJS) hcc.o $(LDLIBS)
+
+all:	        $(SRCS)
+		test
+
+.DONE: 
+	sound /home/hua/sound/clink
+
+.FAILED:  
+	sound /home/hua/sound/splat
+
+  
+  
+

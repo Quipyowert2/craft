@@ -1,0 +1,4 @@
+#define scroll_left_width 8
+#define scroll_left_height 8
+static char scroll_left_bits[] = {
+   0x00, 0x08, 0x0c, 0x7e, 0x7e, 0x0c, 0x08, 0x00};

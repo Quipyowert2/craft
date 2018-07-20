@@ -1,0 +1,4 @@
+#define scroll_down_width 8
+#define scroll_down_height 8
+static char scroll_down_bits[] = {
+   0x00, 0x18, 0x18, 0x18, 0x7e, 0x3c, 0x18, 0x00};

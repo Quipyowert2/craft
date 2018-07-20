@@ -1,0 +1,16 @@
+id  ov-color walk hl forest grass dig water grown what
+10  63       1     0 0      0     1   0       1   tree_stump
+11  20       0     0 1      0     0   0       0   tree
+12  19       0     0 1      0     0   0       0   tree 
+20  14       1     1 0      0     1   0       1   mud
+40  63       1     1 0      1     1   0       1   grass 
+50  63       1     1 0      1     1   0       1   grass 
+60  39       0     0 0      0     1   1       0   water
+61  39       0     0 0      0     0   1       0   sea
+80  29       1     1 0      0     1   0       0   wall
+100 39       1     0 0      0     1   0       0   field
+105 49       0     0 0      0     0   0       0   building
+150 63       1     1 0      0     1   0       0   trap
+160 63       1     0 0      0     0   0       0   trade_wood
+170 63       1     0 0      0     0   0       0   trade_gold
+

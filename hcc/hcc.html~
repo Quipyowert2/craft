@@ -1,0 +1,735 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+
+
+  <IMG ALIGN=MIDDLE SRC ="../../pics/hcc.gif">
+<HR>
+<H1>Publications of the REFLEX-Project</H1><P>
+<HR>
+
+<DL>
+<DD><H2>Theory of approximation and estimation</H2>
+  <UL>
+  <LI><A HREF = "#pre3">
+      Reflective Modular Neural Network Systems</A>
+  <LI><A HREF = "#pre4">
+      Multiple Network Systems (Minos)  Modules: Task Division and Module
+      Discrimination</A>
+  <LI><A HREF = "#pre5">
+      Hyperplane Dynamics as a Means to Understanding Back-Propagation Learning
+      and Network Plasticity</A>
+  <LI><A HREF = "#pre6">
+      Neural Network Constructive Algorithms:
+      Trading Generalization for Learning Efficiency?</A>
+  <LI><A HREF = "#ref93.1">
+      Learning from Examples, Agent Teams and the Concept of Reflection</A>
+  <LI><A HREF = "#ref93.2">
+      Rejection of Incorrect Answers from a Neural Net Classifier</A>
+  <LI><A HREF = "#ref94.1">
+      Data Exploration with Reflective Adaptive Models</A>
+  <LI><A HREF = "#ref94.2">
+      The Pandemonium System of Reflective Agents</A>
+  <LI><A HREF = "#ref94.14">
+      Open Worlds, Reflective Statistics and Stochastic Modelling</A>
+  <LI><A HREF = "#ref95.4">
+      Algorithms, data and hypotheses -Learning in open worlds-</A>
+  <LI><A HREF = "#ref95.6">
+      On data-driven derivation of discrete mappings between finite spaces</A>
+  </UL>
+<DD><H2>Adaptive robot controler</H2>
+  <UL>
+  <LI><A HREF = "#pre1">
+      The Janus Architecture for a Robot Brain</A> 
+  <LI><A HREF = "#pre2">
+      The JANUS Architecture for an Artificial Brain: Medical Perspectives</A>
+  <LI><A HREF = "#ref94.3">
+      JANUS: A Robot Manipulator System Implemented on a Blackboard
+      Architecture</A>
+  <LI><A HREF = "#ref94.4">
+      JANUS: A Society of Agents</A>
+  <LI><A HREF = "#ref94.10">
+      A heuristic approach to the inverse differential kinematics problem</A>
+  <LI><A HREF = "#ref94.12">
+      Adaptive Control of a Robot Arm Using Driver Programs</A>
+  <LI><A HREF = "#ref94.13">
+      Lernen und Adaption bei der Steuerung zweier Roboterarme</A>
+  <LI><A HREF = "#ref95.1">
+      The Architectural Ingredients of the JANUS Robot Controller</A>
+  <LI><A HREF = "#ref95.2">
+      Learning and Recall of Robot Manipulator Motions Using Driver
+      Programs</A>
+  </UL>
+<DD><H2>Robot simulation environment</H2>
+  <UL>
+  <LI><A HREF = "#ref94.5">
+      The simulation environment ROBOWORLD</A>
+  <LI><A HREF = "#ref94.6">
+      ROBOWORLD: A 3-D Simulation Tool</A>
+  </UL>
+</DL>
+
+<HR>
+<H1>Abstracts</h1>
+
+<DL>
+
+<DT><HR>
+<DD><A NAME = "pre1">
+    <H2>The Janus Architecture for a Robot Brain</H2></A> 
+
+    <A HREF="ftp://borneo.gmd.de/pub/as/janus/pre_1.ps">
+    <IMG ALIGN=RIGHT SRC ="../../pics/sftp_ps.gif"></A>
+
+    <I>F.J. Smieja </I> and <I>H. Mühlenbein, December 13, 1990</I><P>
+
+    REFLEX  internal paper  <P>
+
+    In the evolution of the mammalian brain the two-sided nature of the
+    neural motor control and sensory input has been preserved in the
+    architecture of the cerebral matter.  We believe this fundamental
+    two-sided nature of the mammalian brain to hold a very important clue
+    to the problem-solving capability of the higher mammals.  The idea
+    of a two-hemisphere architecture on the macro-level
+    and modules of neural networks on the micro-level, with conflicts
+    between the two, as observed in Nature, provides
+    a basis for the next generation of artificial problem solvers,
+    exemplified by our Janus architecture.  
+    This architecture consists of two halves that can independently process
+    the same data and generate decisions about a change of the robot's
+    state.  The halves are connected by simple processing channels through
+    which  they can exchange information at various levels.  The brain
+    consists  of neural networks at its lowest level, and so is adaptive,
+    but the two sides process and learn about the environment in subtly
+    different ways.  The Janus architecture is described here in a top-down
+    modular fashion,  leading to the presentation of the model for a
+    simple prototype system,  Janus~I,  which is to be developed through
+    simulation.  Janus~I is a first step into ``reflective''
+    architectures,  whereby the system internally reflects about the
+    capabilities and reliability of its modules. <P>
+
+<DT><HR>
+<DD><A NAME = "pre2">
+    <H2>The JANUS Architecture for an Artificial Brain: Medical Perspectives
+    </H2></A>
+
+    <A HREF="ftp://borneo.gmd.de/pub/as/janus/pre_2.ps">
+    <IMG ALIGN=RIGHT SRC ="../../pics/sftp_ps.gif"></A> 
+
+    <I>F.J. Smieja </I> and H. Mühlenbein, March 22, 1991 </I><P>
+
+    (GMD report 635)<P>
+
+    In the evolution of the mammalian brain the two-sided nature of the
+    neural motor control and sensory input has been preserved in the
+    architecture of the cerebral matter.  We believe this fundamental
+    two-sided nature of the mammalian brain to hold a very important clue
+    to the problem-solving capability and method of the higher mammals.
+    The <B>JANUS</B> idea for the design of a robot's brain is to have a
+    two-hemisphere architecture on the macro-level and self-assessing
+    modules of neural networks on the micro-level.  At the highest
+    architectural level there is the possibility of conflicts between the
+    opinions of the two hemispheres, which can independently process the
+    same data and generate motor decisions.  The halves are connected by a
+    simplified analogue of the Corpus Callosum, through which they can
+    exchange information at various architectural levels.  In this paper
+    the J<B>ANUS</B> architecture is motivated and described, and we explain
+    how we expect to use this medically-inspired model to contribute to
+    our understanding of  neurophysiological rehabilitation, through
+    construction of a  <I> visuo-manual</I> prototype, which has two eyes
+    and two arms. <P>
+
+<DT><HR>
+<DD><A NAME = "pre3">
+    <H2>Reflective Modular Neural Network Systems</H2></A>
+
+    <A HREF="ftp://borneo.gmd.de/pub/as/janus/pre_3.ps">
+    <IMG ALIGN=RIGHT SRC ="../../pics/sftp_ps.gif"></A> 
+
+    <I>F.J. Smieja and H. Mühlenbein, March 13, 1992</I><P>
+
+    (GMD report 633)<P>
+
+    Many of the current artificial neural network systems have serious
+    limitations, concerning accessibility, flexibility, scaling and
+    reliability. In order to go some way to removing these we suggest a
+    <I>reflective neural network architecture</I>. In such an architecture, the
+    modular structure is the most important element.  The building-block
+    elements are called <B>MINOS</B> modules.  They perform
+    <I>self-observation</I> and inform on the current level of development, or
+    scope of expertise, within the module.  A <I>Pandemonium</I> system
+    integrates such submodules so that they work together to handle
+    mapping tasks.  Network complexity limitations are
+    attacked in this way with the Pandemonium problem decomposition
+    paradigm, and both static and dynamic unreliability of the whole
+    Pandemonium system is effectively eliminated through the
+    generation and interpretation of <I>confidence</I> and 
+    <I>ambiguity</I> measures at every moment during the development of the
+    system.
+
+    Two problem domains are used to test and demonstrate various aspects
+    of our architecture.  <I>Reliability</I> and  <I>quality</I> measures
+    are defined for systems that only answer part of the time.  Our system
+    achieves better quality values than single networks of larger size for
+    a handwritten digit problem.  When both second and third best answers
+    are accepted, our system is left with only 5 % error on the test set,
+    2.1 % better than the best single net.  It is also shown how the
+    system can elegantly learn to handle garbage patterns.  With the
+    parity problem it is demonstrated how complexity of problems may be
+    decomposed automatically by the system, through solving it with
+    networks of size smaller than a single net is required to be.  Even
+    when the system does not find a solution to the parity problem,
+    because networks of too small a size are used, the reliability remains
+    around 99--100 %.
+
+    Our Pandemonium architecture gives more power and flexibility to the
+    higher levels of a large hybrid system than a single net system can,
+    offering useful information for higher-level feedback loops, through
+    which reliability of answers may be intelligently traded for less
+    reliable but important ``intuitional'' answers.  In providing weighted
+    alternatives and possible generalizations, this architecture gives the
+    best possible service to the larger system of which it will form part.  <P>
+
+
+<DT><HR>
+<DD><A NAME = "pre4">
+    <H2>Multiple Network Systems (Minos)  Modules: Task Division and Module
+     Discrimination</H2></A>
+
+    <A HREF="ftp://borneo.gmd.de/pub/as/janus/pre_4.ps">
+    <IMG ALIGN=RIGHT SRC ="../../pics/sftp_ps.gif"></A>
+
+    <I>F.J. Smieja, April 1991</I> <P>
+
+    (GMD report 638)<P>
+    Proceedings of the 8th AISB conference on Artificial Intelligence, Leeds<P>
+
+    It is widely considered an ultimate connectionist objective to
+    incorporate neural networks into intelligent <B>systems.</B> These
+    systems are intended to possess a varied repertoire of functions
+    enabling adaptable interaction with a non-static environment.  The
+    first step in this direction is to develop various neural network
+    algorithms and models, the second step is to combine such networks
+    into a modular structure that might be incorporated into a workable
+    system.  In this paper we consider one aspect of the second point,
+    namely: processing reliability and hiding of wetware details.
+    Presented is an architecture for a type of neural expert module, named
+    an <B>Authority</B>. An Authority consists of a number of <B>Minos</B>
+    modules.  Each of the Minos modules in an Authority has the same
+    processing capabilities, but varies with respect to its particular
+    <B>specialization</B> to aspects of the problem domain.  The
+    Authority employs the collection of Minoses like a panel of
+    experts. The expert with the highest <B>confidence</B> is believed,
+    and it is the answer and confidence quotient that are transmitted to
+    other levels in a system hierarchy. 
+    <P>
+
+<DT><HR>
+<DD><A NAME = "pre5">
+    <H2>Hyperplane Dynamics as a Means to Understanding Back-Propagation
+    Learning and Network Plasticity</H2></A>
+
+    <A HREF="ftp://borneo.gmd.de/pub/as/janus/pre_5.ps">
+    <IMG ALIGN=RIGHT SRC ="../../pics/sftp_ps.gif"></A> 
+
+    <I>F.J. Smieja, March 1992</I> <P>
+ 
+    (GMD report No 634) <P>
+    Complex Systems (1994) <B>8</B>(1):41-65 <P>
+
+    The processing performed by a feed-forward neural network is often
+    interpreted through use of decision hyperplanes at each layer. The
+    <B>adaptation</B> process, however, is normally explained using the
+    picture of gradient descent of an error landscape.  In this paper the
+    <B>dynamics</B> of the decision hyperplanes is used as the model of
+    the adaptation process. A electro-mechanical analogy is drawn where
+    the dynamics of hyperplanes is determined by interaction forces
+    between hyperplanes and the particles which represent the patterns.
+    Relaxation of the system is determined by increasing hyperplane
+    inertia (mass).  This picture is used to clarify the dynamics of
+    learning, and to go some way to explaining learning deadlocks and
+    escaping from certain local minima.  Furthermore network
+    plasticity is introduced as a dynamic property of the system, and
+    its reduction as a necessary consequence of information storage.
+    Hyperplane inertia is used to explain and avoid destructive relearning
+    in trained networks.<P>
+
+<DT><HR>
+<DD><A NAME = "pre6">
+    <H2>Neural Network Constructive Algorithms:
+    Trading Generalization for Learning Efficiency?</H2>
+
+    <A HREF="ftp://borneo.gmd.de/pub/as/janus/pre_6.ps">
+    <IMG ALIGN=RIGHT SRC ="../../pics/sftp_ps.gif"></A> 
+
+    <I>F.J. Smieja, March 1992</I> <P>
+
+    (GMD report No 636) <P>
+     Circuits, Systems and Signal Processing (1993) <B>12</B>(2):331-374<P>
+
+    There are currently several types of constructive, or growth,
+    algorithms available for training a feed-forward neural network.  This
+    paper describes and explains the main ones, using a fundamental
+    approach to the multi-layer perceptron problem-solving mechanisms.
+    The claimed convergence properties of the algorithms are verified
+    using just two mapping theorems, which consequently enables all the
+    algorithms to be unified under a basic mechanism.  The algorithms are
+    compared and contrasted and the deficiencies of some highlighted. The
+    fundamental reasons for the actual success of these algorithms are
+    extracted, and used to suggest where they might most fruitfully be
+    applied. A suspicion that they are not a panacea for all current
+    neural net work difficulties, and that one must somewhere along the
+    line pay for the learning efficiency they promise, is developed into
+    an argument that their generalization abilities will lie on average
+    below that of back-propagation. <P>
+
+<DT><HR>
+<DD><A NAME = "ref93.1">
+    <H2>Learning from Examples, Agent Teams and the Concept of Reflection</H2>
+
+    <A HREF="ftp://borneo.gmd.de/pub/as/janus/ref93_1.ps">
+    <IMG ALIGN=RIGHT SRC ="../../pics/sftp_ps.gif"></A> 
+
+    <I>Uwe Beyer and Frank Smieja, June 1993</I><P>
+
+    GMD technical Report No. 766 <P>
+    REFLEX Report No. 1993/1 <P>
+    To be published in <I>International Journal of Pattern Recognition 
+    and Artificial Intelligence</I><P>
+
+    Learning from examples has a number of distinct algebraic forms,
+    depending on what is to be learned from which available information.
+    One of these forms is G (x) = y, where the
+    input--output tuple (x,y) is the available information, and G
+    represents the process determining the mapping from x to y.
+    Various models, y = f(x), of G can be constructed using the
+    information from the (x,y) tuples.  In general, and for real-world
+    problems, it is not reasonable to expect the exact representation of
+    G to be found (i.e.\ a formula that is correct for all possible
+    (x,y)).  The modeling procedure involves finding a
+    satisfactory set of basis functions, their combination, a coding
+    for (x,y) and then to adjust all free parameters in an approximation
+    process, to construct a final model.  The approximation process can
+    bring the accuracy of the model to a certain level, after which it
+    becomes increasingly expensive to improve further.  Further
+    improvement may be gained through constructing a number of agents
+    a, each of which develops its own model f_a. These 
+    may then be combined in a second modeling phase to synthesize a
+    <I>team</I> model.  If each agent has the ability of internal 
+    <I>reflection </I>the combination in a team framework becomes more
+    profitable.  We describe reflection and the generation of a 
+    <I>confidence</I> function: the agent's estimate of the correctness of
+    each of its predictions.  The presence of reflective information is
+    shown to increase significantly the performance of a team.  <P>
+
+<DT><HR>
+<DD><A NAME = "ref93.2">
+    <H2>Rejection of Incorrect Answers from a Neural Net Classifier</H2>
+ 
+    <A HREF="ftp://borneo.gmd.de/pub/as/janus/ref93_2.ps">
+    <IMG ALIGN=RIGHT SRC ="../../pics/sftp_ps.gif"></A> 
+
+    <I>Frank Smieja, June, 1993</I> <P>
+
+    REFLEX Report No. 1993/2<P>
+    In <I>New Trends in Neural Computation (Proceedings of the {IWANN} 93)</I> <P> 
+
+    The notion of approximator rejection is described, and applied to a
+    neural network.  For a real world classification problem the residual
+    error is shown to decrease with the inverse exponential of the
+    fraction of patterns rejected.  The trade-off of ``good'' patterns
+    rejected and ``bad'' patterns rejected is shown to increase
+    approximately linearly with rejection rate.  A compromise is therefore
+    necessary between trade-off/rejection rate and residual error.  A
+    meta-level solution is proposed for removal of the residual error,
+    through use of a modular system of parallel approximators.  <P>
+
+<DT><HR>
+<DD><A NAME = "ref94.1">
+    <H2>Data Exploration with Reflective Adaptive Models</H2>
+
+    <A HREF="ftp://borneo.gmd.de/pub/as/janus/ref94_1.ps">
+    <IMG ALIGN=RIGHT SRC ="../../pics/sftp_ps.gif"></A> 
+
+    <I>Uwe Beyer and Frank Smieja, February, 1994</I><P>
+
+    GMD technical Report No. 797 <p>
+    REFLEX Report No. 1994/1 <p>
+    To be published (manuscript somewhat changed) in 
+    <I>Computational Statistics and Data Analysis</I><P>
+
+    An important property of models constructed through the process of
+    learning from examples is the manipulation and control of the data
+    itself.  When the data is actively selected or generated the process
+    is known as <I>exploration</I>.
+    Reflection  about the internal
+    model allows exploration to be more than just a random choice in the
+    input space.  In this paper we identify two basic forms of reflective
+    exploration: density-based and error-based.  We demonstrate the
+    applicability of exploration processes and the advantages of using
+    them in open systems using the task of learning a 2-dimensional
+    continuous function. <P>
+
+<DT><HR>
+
+<DD><A NAME = "ref94.2">
+    <H2>The Pandemonium System of Reflective Agents</H2>
+ 
+    <A HREF="ftp://borneo.gmd.de/pub/as/janus/ref94_2.ps">
+    <IMG ALIGN=RIGHT SRC ="../../pics/sftp_ps.gif"></A> 
+
+    <I>Frank Smieja, March, 1994</I><P>
+
+    GMD technical Report No. 794 <p>
+    REFLEX Report No. 1994/2 <P>
+    To be published in <I>IEEE Transactions on Neural Networks</I><P>
+
+    The Pandemonium system of reflective MINOS agents
+    solves problems by automatic dynamic modularization of the input
+    space. The agents contain feed-forward neural networks which adapt
+    using the back-propagation algorithm. We demonstrate the performance
+    of Pandemonium on various categories of problems.  These include
+    learning continuous functions with discontinuities, separating two
+    spirals, learning the parity function, and optical character
+    recognition.  It is shown how strongly the advantages gained from
+    using a modularization technique depend on the nature of the problem.
+    The superiority of the Pandemonium method over a single net on the
+    first two test categories is contrasted with its limited advantages
+    for the second two categories.  In the first case the system converges
+    quicker with modularization and is seen to lead to simpler
+    solutions. For the second case the problem is not significantly
+    simplified through flat decomposition of the input space, although
+    convergence is still quicker.<P>
+
+<DT><HR>
+<DD><A NAME = "ref94.3">
+    <H2>JANUS: A Robot Manipulator System Implemented on a
+     Blackboard Architecture</H2>
+
+    <A HREF="ftp://borneo.gmd.de/pub/as/janus/ref94_3.ps">
+    <IMG ALIGN=RIGHT SRC ="../../pics/sftp_ps.gif"></A>
+
+    <I>F. J. Smieja and U. Beyer, February, 1994</I><P>
+
+    GMD technical Report No. 839 <p>
+    REFLEX Report No. 1994/3 <P>
+    <I>Poster presentation in AICS '94 (Dublin, Ireland)</I> <P>
+
+    Blackboard architectures tend to be used in task domains where the
+    problems are typically complex and require diverse sources of
+    expertise in order to be solved.  There are many such systems in use,
+    particularly in the domain of theoretical knowledge-based systems.
+    The data required to solve the problem through manipulation by the
+    agents lie in a global repository, known as the blackboard.  All the
+    agents may read from the blackboard, processing the data and producing
+    more that may be posted onto the blackboard.  Communication between
+    agents may take place only in this indirect way.
+    The solution to a problem is built one step at a time.  At each
+    control cycle any type of reasoning step can be used.  Thus agents
+    using widely different methods of viewing a sub-problem and its
+    solution can always be used to update data on the blackboard,
+    so long as the required data is there to make the agent executable.
+    This allows a dynamic and opportunistic application of expert knowledge.<P>
+
+
+<DT><HR>
+<DD><A NAME = "ref94.4">
+    <H2>JANUS: A Society of Agents</H2>
+
+    <A HREF="ftp://borneo.gmd.de/pub/as/janus/ref94_4.ps">
+    <IMG ALIGN=RIGHT SRC ="../../pics/sftp_ps.gif"></A> 
+
+    <I>Uwe Beyer and Frank Smieja</I><P>
+
+    GMD technical Report No. 840 <p>
+    REFLEX Report No. 1994/4 <p>
+    Submitted to <I>Autonomous Robots</I><P>
+
+    The JANUS project is described in terms  of the maxims followed in
+    each level of its construction.  The two-armed robot is designed to
+    operate in an open system,  and must possess the necessary flexibility and
+    heterogeneity to make this possible.  The key ingredients behind JANUS
+    are represented in the form of six principles. It is shown how
+    the principles demand a number of  special design features,  including
+    reflective agents, a priori knowledge,  concurrency,  parallelism and
+    adaptivity. <P>
+
+<DT><HR>
+<DD><A NAME = "ref94.5">
+    <H2>The simulation environment ROBOWORLD</H2>
+
+    <I>Thomas Sudbrak</I> <P>
+
+    REFLEX Report No. 1994/5 <p>
+
+    Roboworld is a simulation environment for objects in a 3-dimensional world
+    with a
+    graphical display of the scenery. It is written in C++ using XWindows. The
+    compiled library can be linked to an application program together with the
+    Xlib and libg++ to produce an executable program. So far only kinematics of
+    geometrical and other special objects can be modelled and visualized.
+
+    It is possible to create an arbitrary number of objects of any available
+    type. Besides their position and orientation in the 3-dimensional space
+    objects have a certain number of attributes -- e.g. color, visibility, size
+    -- that can be read and/or modified. Kinematics is performed by translation
+    and rotation. <P>
+
+<DT><HR>
+<DD><A NAME = "ref94.6">
+    <H2>ROBOWORLD: A 3-D Simulation Tool</H2>
+
+    <A HREF="ftp://borneo.gmd.de/pub/as/janus/ref94_6.ps">
+    <IMG ALIGN=RIGHT SRC ="../../pics/sftp_ps.gif"></A> 
+
+    <I>Uwe Beyer, Frank Smieja, Thomas Sudbrak</I> <P>
+
+    GMD technical Report No. 865 <p>
+    REFLEX Report No. 1994/6 <p>
+
+    The Janus-Project applies adaptive methods to the field of robotics.
+    To support the research a simulation of the robot arm hardware was
+    required.  The simulation toolkit <B>Roboworld</B> was implemented for
+    this purpose. It supports a 3D world simulation including objects,
+    robot arm hardware and also the possibility of associating dynamic
+    procedure with objects (allowing motion). Its functionality is general
+    enough to support simulation of other non-robot worlds. In contrast to
+    other extremely big and expensive simulation tools, Roboworld runs on
+    a single SUN-Sparc 10 workstation without any extra hardware
+    requirements. In real-time mode a wire-frame model is supported. A
+    Phong-renderer is used for generation of full images. There is also a
+    tool for the production of animated films, using either Phong or
+    wire-frame quality. <P>
+
+<DT><HR>
+<DD><A NAME = "ref94.10">
+    <H2>A heuristic approach to the inverse differential kinematics
+    problem</H2>
+
+    <A HREF="ftp://borneo.gmd.de/pub/as/janus/ref94_10.ps">
+    <IMG ALIGN=RIGHT SRC ="../../pics/sftp_ps.gif"></A> 
+
+    <I>Uwe Beyer and Frank Smieja, Juli, 1994</I><P>
+
+    GMD technical Report No. 864 <p>
+    REFLEX Report No. 1994/10 <p>
+    to be published in <I>Journal of Intelligent Robotic Systems: Theory and Applications</I><P>
+
+    The inversion of the kinematics or manipulators is one of the central
+    problems in the field of robot arm controlling. Inverse differential 
+    kinematics is a popular method to solve this task. Normally the solution
+    of the problem requires a complex mathematical apparatus. It includes
+    methods to solve equation system as well as algorithms for optimization. 
+    In this paper we introduce a naive heuristic  method, which is able to
+    work without explicit complex mathematical algorithms.<P>
+
+<DT><HR>
+<DD><A NAME = "ref94.12">
+    <H2>Adaptive Control of a Robot Arm Using Driver Programs</H2>
+
+    <A HREF="ftp://borneo.gmd.de/pub/as/janus/ref94_12.ps">
+    <IMG ALIGN=RIGHT SRC ="../../pics/sftp_ps.gif"></A> 
+
+    <I>Frank Smieja, Uwe Beyer and Gernot Richter, November, 1994</I> <P>
+
+    GMD technical Report No. 886 <p>
+    REFLEX Report No. 1994/12 <P>
+    to be published in <I>Artificial Intelligence in Engineering</I> <P>
+
+    Most successful robotic manipulators have the characteristic of
+    producing precise, fast, smooth and reproducible movements.  Their
+    drawback is that they tend to have a limited repertoire which can only
+    be extended by costly inverse kinematics calculations or direct
+    teach-in sessions.  The goal of our project is to develop a flexible
+    <I>open world</I> robot, which adapts to its task and environment
+    progressively and in an iterative manner.  It begins carefully and
+    slowly, with small jagged movements, but after repetition of similar
+    movements reaches an acceptable level of smoothness and speed of
+    execution.  It can be placed in new environments with new task
+    definitions, requiring only a practice time before becoming expert in
+    its new surroundings.  Similarities from other sub-tasks are
+    recognized and may be transfered to the new domains.  The basic
+    constituents of this type of adaptive robot are a simple iterative
+    inverse kinematics and <I>driver programs</I>. In this paper the idea
+    of driver programs for robot arm control is introduced and their
+    properties investigated. <P>
+
+<DT><HR>
+<DD><A NAME = "ref94.13">
+    <H2>Lernen und Adaption bei der Steuerung zweier Roboterarme</H2>
+
+
+    <A HREF="ftp://borneo.gmd.de/pub/as/janus/ref94_13.ps">
+    <IMG ALIGN=RIGHT SRC ="../../pics/sftp_ps.gif"></A>
+
+    <I>Uwe Beyer and Gernot Richter and Frank Smieja, July, 1994</I><P>
+
+    REFLEX Report No. 1994/13 <P>
+    Tagungsband <I>Autonome Mobile Systeme 1994</I><P>
+
+    Als Anwendungbeispiel für lernfähige und adaptive Systeme wird die
+    verhaltensorientierte Steuerung eines -- zunächst simulierten
+     -- Hand/Auge-Systems vorgestellt,
+    das mit einem Paar von mehrachsigen Knickarm-Robotern ad hoc gestellte
+    Handhabungsaufgaben
+    in Realzeit löst. Die Arme bewegen sich in einer offenen,
+    mit Hindernissen besetzten
+    3-dimensionalen Umgebung nach den Vorgaben einer dynamischen Bahnplanung im
+    Arbeitsraum. Schrittweite der Bewegung und Kontrollzyklus des Systems
+    sind so gewählt, daß
+    Maßnahmen zur Kollisionsvermeidung erst bei Ausführung der
+    Bewegungen erforderlich sind.
+    Erfolgreiche Bewegungen lernt das System, indem es deren Beschreibungen 
+    so speichert, daß sie bei
+    ähnlichen Aufträgen wiederverwendet werden können.
+    Ungelernten Bewegungen liegt eine
+    iterative IDK-Heuristik (Inverse Differentielle Kinematik) zugrunde. <P>
+
+<DT><HR>
+<DD><A NAME = "ref94.14">
+    <H2>Open Worlds, Reflective Statistics and Stochastic Modelling</H2>
+
+    <A HREF="ftp://borneo.gmd.de/pub/as/janus/ref94_14.ps">
+    <IMG ALIGN=RIGHT SRC ="../../pics/sftp_ps.gif"></A>
+
+    <I>H. Mühlenbein, July 26, 1994</I><P>
+
+    REFLEX Report No. 1994/14 <P>
+
+    The real world is open and ambiguous. The
+    problem of its openess has been neglected in science for a long time,
+    especially in artificial intelligence. Most researchers in
+    artificial intelligence still deal with closed worlds. A recent
+    example is the CYC project from Lenat which started in 1984. Lenat
+    believed that after entering about 10 million facts into CYC, that
+    ``CYC will grow by assimilating textbooks, literature, newpapers etc.''.
+    Now, in 1994 it turned out, that CYC has hardly enough knowledge for
+    a small artificial domain in VLSI design.
+
+    Openess is a deep problem, it has to be taken seriously. The real
+    world is not completely knowable. In fact, the domain of knowledge
+    is very small compared to the huge unknown domain. Any system operating 
+    in the real world has to act with incomplete knowledge. This general
+    observation has far reaching implications for probability theory and
+    statistical inference. The theoretical discussion in these areas
+    culminated in Popper's famous sentence: <I>''All knowledge is assumption
+    knowledge''</I>. Every knowledge formulated as a hypothesis is preliminary,
+    subject to rejection if new data is in contradiction to the
+    hypothesis. In more technical terms this means for statistical inference:
+    <I> Probabilistic hypotheses do not have a hypothesis probability.</I> It
+    is possible to rate a number of hypotheses according to how good they
+    explain the data, but it is not possible to compute a number which can
+    be interpreted as the probability of a given hypothesis. <P>
+
+<DT><HR>
+<DD><A NAME = "ref95.1">
+    <H2>The Architectural Ingredients of the JANUS Robot Controller</H2>
+
+    <A HREF="ftp://borneo.gmd.de/pub/as/janus/ref95_1.ps">
+    <IMG ALIGN=RIGHT SRC ="../../pics/sftp_ps.gif"></A>
+
+    <I>Uwe Beyer, Frank Smieja, March 28, 1995</I><P>
+
+    GMD technical Report No. 914 <p>
+    REFLEX Report No. 1995/1 <P>
+
+    In the initial phases of the REFLEX project we
+    investigated artificial problems in order to explore the field of
+    adaptive algorithms such as neural networks and nearest-neighbor
+    methods.  A result of this work was the recognition that the
+    mathematical results obtained by studying artificial problems can not
+    easily be applied to realistic scenarios characterized by their
+    definition in the <I>open world</I>. Therefore we made a step in the
+    direction of real world problems and are now attempting to control a
+    two-arm robot that possesses a vision system (JANUS). In working on
+    the problem of building such a complex system that should also work in
+    the real world (we have one real hardware arm), the importance of its
+    architectural aspects became clear to us.  Individual components of
+    the system and the details of how they work or whether or not they are
+    adaptive form a less important issue for the system as a whole than
+    its global properties.  The global properties are typified by the
+    concurrent solution of many different sub-problems by a
+    correspondingly heterogeneous set of frequently cooperative
+    strategies. 
+
+
+<DT><HR>
+<DD><A NAME = "ref95.2">
+    <H2>Learning and Recall of Robot Manipulator Motions Using Driver
+     Programs</H2>
+
+    <A HREF="ftp://borneo.gmd.de/pub/as/janus/ref95_2.ps">
+    <IMG ALIGN=RIGHT SRC ="../../pics/sftp_ps.gif"></A>
+
+    <I>Frank Smieja, Uwe Beyer, March 28, 1995</I><p>
+ 
+    GMD technical Report No. 939 <p>
+    REFLEX Report No. 1995/2 <P>
+    to appear in Workshop notes for EPIA '95 (Madeira) <P>
+
+    We introduce the driver program method for learning
+    and recall of robot manipulator motions.  This method is designed to
+    be of use when robots are to operate in open worlds.  An open world is
+    characterized by its unpredictability and approximate knowledge and
+    task descriptions.  The requirements for a robot are therefore not so
+    much high precision and speed as a robust and flexible ability to act
+    reliably within a given tolerance. Furthermore the robot must be able
+    to learn as it experiences the world such that its acquired knowledge
+    may be transferred to new domains.
+
+<DT><HR>
+<DD><A NAME = "ref95.4">
+    <H2>Algorithms, data and hypotheses -Learning in open worlds-</H2>
+
+    <A HREF="ftp://borneo.gmd.de/pub/as/janus/ref95_4.ps">
+    <IMG ALIGN=RIGHT SRC ="../../pics/sftp_ps.gif"></A>
+
+    <I>H. Mühlenbein</I><p>
+ 
+    REFLEX Report No. 1995/4 <P>
+
+    This paper contains an informal discussion about how to synthesize 
+    reasonable hypotheses from data. This is a fundamental problem for any 
+    system acting in the real world. The problem consists of three 
+    interconnected subproblems: fitting the past data to a hypothesis (model),
+    selecting promising new data in order to increase the validity of the 
+    hypothesis, and selecting a hypothesis in a class of hypotheses (models). 
+    We argue that molecular electronics may be important for the development
+    of such systems. First, it provides the computing power needed for such
+    systems.  Second, it can help in defining a new computational model
+    urgently needed for the design of an artificial systems synthesizing
+    hypotheses about processes of the real world.
+
+<DT><HR>
+<DD><A NAME = "ref95.6">
+    <H2>On data-driven derivation of discrete mappings between finite
+    spaces</H2>
+
+    <A HREF="ftp://borneo.gmd.de/pub/as/janus/ref95_6.ps">
+    <IMG ALIGN=RIGHT SRC ="../../pics/sftp_ps.gif"></A>
+
+    <I>Uwe Beyer, Frank Smieja, May 20, 1995</I><p>
+ 
+    GMD technical Report No. 937 <p>
+    REFLEX Report No. 1995/6 <P>
+    Submitted to <I>IEEE Transactions on Neural Networks</I><P>
+
+    The guessing of a function behind a discrete mapping
+    between finite spaces using only the information provided by positive
+    examples is shown to be in principle optimally handled by a lookup
+    table combined with a random process.  We explore the implications of
+    this result for the construction of intelligent approximators.
+
+</DL>
+
+<HR>
+<A HREF="http://www.gmd.de">  <IMG ALIGN=MIDDLE SRC ="../../pics/gmd.gif"></A>
+<A HREF="../pages/janus.html"> <IMG ALIGN=MIDDLE SRC ="../pics/janus.gif"></A>
+<HR>
+<A HREF="../../pages/beysmie.html"><ADDRESS>uwe.beyer@gmd.de</ADDRESS><ADDRESS>smieja@gmd.de</ADDRESS></A>
+<HR>
+
+</BODY>
+</HTML>
+ 

@@ -1,0 +1,61 @@
+
+Source Code of CRAFT
+====================
+
+How to compile ?
+
+You need the following things to compile craft :
+
+
+- The file craftcc.tar.Z 
+  (from ftp://borneo.gmd.de/pub/as/janus/craft/craftcc.tar.Z")
+
+- The gnu g++, gcc command
+
+- A shell-script interpreter
+
+- The tar, compress command 
+
+- and Xlib
+ 
+Now you can start to do the following things.
+
+- place craftcc.tar.Zin a new directory (e.g. craft) and "untar" it.
+
+- edit "install" and change paths for libs and call of gnu stuff
+  (only a few lines)
+
+- execute install
+
+If everything is proper it will take a bit to compile craft. If this
+process is finished, you will have an executable craft in the
+directory afterwards. Now you can call it.
+
+Crafts needs a proper directory-structure which contains the various resource
+files used by craft. Its structure looks like :
+
+  craft         "the executable"
+  .windefaults  "sugar for the window system"
+  \buttons      "contains the button icons"
+  \hcraft       "contains pictures of units and menus"
+
+This structure is automatically produced during the unpacking of the source
+code files. You should compile in the top directory of the above
+directory tree.
+
+Why no Makefile ?
+
+I hate makefiles !!! This dammed stuff is always a good source for many
+obsolete bugs. Therefore we don't use make for our projects, but
+if you like to have a makefile, it should be easy to convert install.
+
+Finally
+
+This source code is free, everybody may do everything with it, if it is not
+used commercially. I guarantee absolutely nothing, everything is at your
+own risk and I explicitly warn you not to compile or play the game :-).
+
+By the way if there are a few guys who are interested in further development
+of the game, mail me. I would be interested to hear your ideas and tips.
+
+E-mail: uwe.beyer@gmd.de

@@ -1,0 +1,49 @@
+button_dir               buttons
+button_border_dark       gray60
+button_border_light      gray90
+button_background        gray80
+button_foreground        black
+button_border_dx         3
+button_border_dy         3
+
+menu_border_dark         gray60
+menu_border_light        gray90
+menu_background          gray80
+menu_foreground          black
+
+frame_border_dark        gray60
+frame_border_light       gray90
+frame_background_light   gray70
+frame_background         gray80
+frame_foreground         black
+
+yes_background           gray80
+yes_foreground           black
+
+ack_background           gray80
+ack_foreground           black
+
+tell_background          gray80
+tell_foreground          black
+
+scroller_border_dark     gray60
+scroller_border_light    gray90
+scroller_background      gray80
+scroller_foreground      black
+
+getline_border_dark      gray60
+getline_border_light     gray90
+getline_background       gray80
+getline_foreground       black
+getline_cursor           yellow
+
+selector_border_dark     gray60
+selector_border_light    gray90
+selector_background      gray80
+selector_foreground      black
+selector_mark            yellow
+selector_line            gray70
+
+filesel_background       gray80
+
+//

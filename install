@@ -1,0 +1,80 @@
+#!/bin/sh 
+
+#---------------------------------------------------------------------
+#
+# The following assigns must be changed according to your system
+#
+
+GCC=gcc
+GPP="g++"
+
+XLIB=/usr/X11R6/lib
+
+#
+#--------------------------------------------------------------------
+
+CFLAGS="-O2 -fexpensive-optimizations -finline-functions"
+HCC=hcc/hcc
+CMP="$HCC -compiler $GCC $CFLAGS -c"
+
+LFLAGS="-lX11 -lm -L$XLIB"
+
+
+echo hcc           ; gcc  -o hcc/hcc hcc/hcc.cc
+
+echo color_trans   ; $CMP color_trans
+echo xtimer        ; $CMP xtimer        
+echo option_menu   ; $CMP option_menu   
+echo setupedit     ; $CMP setupedit     
+echo robot         ; $CMP robot         
+echo land          ; $CMP land          
+echo ship          ; $CMP ship          
+echo building      ; $CMP building      
+echo dir           ; $CMP dir           
+echo object_handler; $CMP object_handler 
+echo pic           ; $CMP pic           
+echo player        ; $CMP player        
+echo field         ; $CMP field         
+echo ilfield       ; $CMP ilfield       
+echo xbm           ; $CMP xbm           
+echo cmap_edit     ; $CMP cmap_edit     
+echo cmap          ; $CMP cmap          
+echo ppm           ; $CMP ppm           
+echo compress      ; $CMP compress      
+echo table         ; $CMP table         
+echo xmath         ; $CMP xmath         
+echo io            ; $CMP io            
+echo cry           ; $CMP cry           
+echo win           ; $CMP win           
+echo dial          ; $CMP dial          
+echo multi_dial    ; $CMP multi_dial    
+echo menu          ; $CMP menu          
+echo xsystem       ; $CMP xsystem       
+echo xfile         ; $CMP xfile         
+echo ppm_handler   ; $CMP ppm_handler   
+echo errorhandling ; $CMP errorhandling 
+echo paramreader   ; $CMP paramreader   
+echo pattern_match ; $CMP pattern_match 
+echo objects       ; $CMP objects       
+echo xstring       ; $CMP xstring       
+echo id_handler    ; $CMP id_handler    
+echo masks         ; $CMP masks         
+echo buttons       ; $CMP buttons       
+echo lru           ; $CMP lru           
+echo scroller      ; $CMP scroller      
+echo selector      ; $CMP selector      
+echo cmap_selector ; $CMP cmap_selector 
+echo getline       ; $CMP getline       
+echo file_selector ; $CMP file_selector 
+echo history       ; $CMP history       
+echo craft         ; $CMP craft            
+
+$GPP xtimer.o option_menu.o setupedit.o robot.o land.o ship.o building.o dir.o object_handler.o pic.o player.o field.o ilfield.o xbm.o cmap_edit.o cmap.o ppm.o compress.o table.o xmath.o io.o cry.o win.o dial.o multi_dial.o menu.o xsystem.o xfile.o ppm_handler.o errorhandling.o paramreader.o pattern_match.o objects.o xstring.o id_handler.o color_trans.o masks.o buttons.o lru.o scroller.o selector.o cmap_selector.o getline.o file_selector.o history.o craft.o $LFLAGS -o craft
+
+
+
+
+
+  
+  
+

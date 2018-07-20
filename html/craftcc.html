@@ -1,0 +1,88 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY background = "pic/back2.gif">
+
+<HEADER>
+<TITLE>Source Code of CRAFT</TITLE>
+</HEADER>
+<BODY>
+
+<H1>Source Code of CRAFT</H1>
+
+<IMG ALIGN=MIDDLE HSPACE=10 SRC="ccc.gif"><H1>Source Code of CRAFT</H1>
+<HR>
+
+<H2>How to compile ?</H2>
+
+You need the following things to compile craft :
+
+<UL>
+
+  <LI>The file
+      <A HREF="ftp://borneo.gmd.de/pub/as/janus/craft/craftcc.tar.Z">craftcc.tar.Z</A>
+
+  <LI>The gnu <B>g++</B> and <B>gcc</B> command
+
+  <LI>A shell-script interpreter
+
+  <LI>The <B>tar</B> command 
+
+  <LI>And <B>Xlib</B>
+ 
+</UL>
+
+Now you can start to do the following things.
+<UL>
+
+<LI>place <A HREF="ftp://borneo.gmd.de/pub/as/janus/craft/craftcc.tar.Z">craftcc.tar.Z</A> in a new directory (e.g. <I>craft</I>) and "untar" it.
+
+<LI>edit <I>install</I> and change paths for libs and call of gnu stuff
+    (only a few lines)
+
+<LI>execute <I>install</I>
+
+</UL>
+
+If everything is proper it will take a bit to compile craft. If this
+process is finished, you will have an executable <I>craft</I> in the
+directory afterwards. Now you can call it.
+
+
+Crafts needs a proper directory-structure which contains the various resource
+files used by craft. Its structure looks like :
+
+<TABLE>
+<TR><Td> craft         <Td> "the executable"
+<TR><Td> .windefaults  <Td> "sugar for the window system"
+<TR><Td> \buttons      <Td> "contains the button icons"
+<TR><Td> \hcraft       <Td> "contains pictures of units and menus"
+</TABLE>
+
+This structure is automatically produced during the unpacking of the source
+code files. You should compile in the top directory of the above
+directory tree.
+
+<H2>Why no Makefile ?</H2>
+
+I hate makefiles !!! This dammed stuff is always a good source for many
+obsolete bugs. Therefore we don't use <I>make</I> for our projects, but
+if you like to have a makefile, it should be easy to convert <I>install</I>.
+
+<H2>Finally</H2>
+
+This source code is free, everybody may do everything with it, if it is not
+used commercially. I guarantee absolutely nothing, <B>everything is at your
+own risk and I explicitly warn you not to compile or play the game :-)</B>.
+<BR>
+
+<I>
+By the way if there are a few guys who are interested in further development
+of the game, mail me. I would be interested to hear your ideas and tips.
+</I>
+
+<HR>
+<A HREF="mailto:uwe.beyer@gmd.de"><B>uwe.beyer@gmd.de</B></A><BR>
+<HR>
+</BODY>
+</HTML>
