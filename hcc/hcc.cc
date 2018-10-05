@@ -1,6 +1,6 @@
 #include "bool.h"
 #include "stdio.h"
-#include "std.h"
+#include "stdlib.h"
 #include "string.h"
 #include "ctype.h"
 

@@ -20,7 +20,7 @@ CMP="$HCC -compiler $GCC $CFLAGS -c"
 LFLAGS="-lX11 -lm -L$XLIB"
 
 
-echo hcc           ; gcc  -o hcc/hcc hcc/hcc.cc
+echo hcc           ; gcc -I. -o hcc/hcc hcc/hcc.cc -lstdc++
 
 echo color_trans   ; $CMP color_trans
 echo xtimer        ; $CMP xtimer        
