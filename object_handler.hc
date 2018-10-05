@@ -9321,7 +9321,7 @@ bool object_handler::readmin (int  n_color,
   }
 
 
-void object_handler::write (int color, char msg [])
+void object_handler::write (int color, const char msg [])
   {players [color_player [color]]->write (msg);
   }
 

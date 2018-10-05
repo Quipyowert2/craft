@@ -25,7 +25,7 @@ compress::~compress ()
   {
   }
 
-char *compress::frame_name (char postfix [])
+char *compress::frame_name (const char postfix [])
   {static char r [128];
 
    sprintf (r, "%s%04d.%s", name, snr, postfix);

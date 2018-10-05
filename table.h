@@ -68,7 +68,7 @@ class table
      table  (char dir [], char name [], bool &is_new, int lru_size = 0);
      ~table ();
 
-     void  check_bound (int adr, int row_no, int column_no, char action []);
+     void  check_bound (int adr, int row_no, int column_no, const char action []);
      void  save        ();
      void  load        ();
 
@@ -76,7 +76,7 @@ class table
      void  rename      (char  new_name []);
      void  copy        (table *destination); 
 
-     int   add_column  (char name [], int type);
+     int   add_column  (const char name [], int type);
      int   column_no   (char name []);
      int   num_columns (); 
 

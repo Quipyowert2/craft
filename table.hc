@@ -66,7 +66,7 @@ table::~table ()
       delete (lru_queue);
   }
    
-void table::check_bound (int adr, int row_no, int column_no, char action [])
+void table::check_bound (int adr, int row_no, int column_no, const char action [])
   {if (row_no < 0 || row_no >= number_of_rows) {
        fprintf (stderr, "row = %d\n", row_no);
        errorstop (4, "table", action, "row out of range", name);
@@ -424,7 +424,7 @@ void table::copy (table *dest)
 
   }
 
-int table::add_column (char name [], int type)
+int table::add_column (const char name [], int type)
   {int col_no;
 
    get_col_no;

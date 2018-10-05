@@ -23,7 +23,7 @@
 #define pattern_dx  292
 #define pattern_dy  20
   
-file_selector::file_selector (char p_name [],
+file_selector::file_selector (const char p_name [],
                               int  x,
                               int  y,
                               char full_file_name [],

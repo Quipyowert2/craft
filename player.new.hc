@@ -2768,7 +2768,7 @@ void player::inform (char msg [])
 
   }
 
-void player::write (char msg [])
+void player::write (const char msg [])
   {if (! is_robot)
       perform_show;
 

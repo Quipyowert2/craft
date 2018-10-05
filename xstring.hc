@@ -151,7 +151,7 @@ char *substring (char s [], int from)
 
   }
 
-char *substring (char s [], int from, int to)
+char *substring (const char s [], int from, int to)
   {static bool is_init = false;
    static char *result;
 

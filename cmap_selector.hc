@@ -11,7 +11,7 @@
 #define cmap_selector_marked_case_color    yellow 
 #define cmap_selector_unmarked_case_color  black
 
-cmap_selector::cmap_selector (char v_name [], 
+cmap_selector::cmap_selector (const char v_name [],
                               win  *v_w,
                               int  v_num_cases,
                               char v_case_string[max_cmap_selector_cases][128],
@@ -290,7 +290,7 @@ bool cmap_selector::eval (int &case_no, bool &is_quit)
   }
 
 
-bool cmap_sel (char name [], char pattern [])
+bool cmap_sel (char name [], const char pattern [])
   {int  num_cases;
    char cases [max_cmap_selector_cases][128];
    bool quit;
@@ -339,7 +339,7 @@ bool cmap_sel (char name [], char pattern [])
   }
 
 
-void get_file_list (char pattern [],
+void get_file_list (const char pattern [],
                     int  &num_files,
                     char file_list [max_cmap_selector_cases][128])
 

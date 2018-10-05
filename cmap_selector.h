@@ -40,7 +40,7 @@ class cmap_selector
    int      case_dy;   
    int      case_dx;
    
-   cmap_selector     (char name [], 
+   cmap_selector     (const char name [],
                       win  *w,
                       int  num_cases,
                       char case_string [max_cmap_selector_cases][128],
@@ -65,8 +65,8 @@ class cmap_selector
 
   }; 
 
-bool cmap_sel      (char name [], char pattern []);
-void get_file_list (char file_pattern [],
+bool cmap_sel      (char name [], const char pattern []);
+void get_file_list (const char file_pattern [],
                     int  &num_files,
                     char file_list [max_cmap_selector_cases][128]);
 

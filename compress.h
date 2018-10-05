@@ -26,7 +26,7 @@ class compress
      compress  ();
      ~compress ();
 
-     char *frame_name (char postfix []);
+     char *frame_name (const char postfix []);
      void encode      (char name    []);
      void decode      (char name    []);
  

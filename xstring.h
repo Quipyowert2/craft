@@ -14,7 +14,7 @@ void changeall  (char s [],
                  int  max_length_of_s,
                  char tmpalte     [],
                  char replacement []);
-char *substring (char s [], int from, int to);
+char *substring (const char s [], int from, int to);
 char *substring (char s [], int from); 
 int  submatch   (char s [], char p [], int &pos);
 void strcat     (char s [], int len, char app []);

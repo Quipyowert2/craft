@@ -38,7 +38,7 @@ class selector
    bool     mark         [max_selector_cases];
    int      case_dy;   
    
-   selector (char name [], 
+   selector (const char name [],
              win  *w,
              int  num_cases,
              char case_string [max_selector_cases][128],

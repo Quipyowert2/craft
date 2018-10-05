@@ -297,7 +297,7 @@ class object_handler
   bool can_built             (int id, int x, int y, int cmd,
                               bool is_robot = false);
   bool attack_possible       (int id, int x, int y);
-  void write                 (int color, char msg []);
+  void write                 (int color, const char msg []);
   bool direct_move           (int id, int range, int &dx, int &dy);
   bool max_diff              (int x, int y, int h);
   bool min_diff              (int x, int y, int h);

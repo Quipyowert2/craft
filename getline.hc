@@ -4,7 +4,7 @@
 
 #define hist_button_name         "/hist.open"
 
-getline::getline (char v_name   [],
+getline::getline (const char v_name   [],
                   win  *v_w,        
                   char v_string [], 
                   int  v_x,         

@@ -64,7 +64,7 @@ double d_get (FILE *f, bool &is_eof)
 
   }
 
-void f_open (FILE *&f, char name [], char mode [])
+void f_open (FILE *&f, const char name [], const char mode [])
   {f = fopen (name, mode);
    /* check_error */
      {if (mode [0] == 'r' && f == NULL)
@@ -128,7 +128,7 @@ time_t f_date (char file_name [])
    return status.st_ctime;
   }
 
-char *f_name (char full_path [])
+char *f_name (const char full_path [])
   {static char r [1024];
 
    for (int i = strlen (full_path); i > 0 && full_path [i] != '/'; i--)
@@ -139,7 +139,7 @@ char *f_name (char full_path [])
    return r;
   }
 
-char *f_path (char full_path [])
+char *f_path (const char full_path [])
   {static char r [1024];
           int  p = 0;
 
@@ -276,7 +276,7 @@ bool sel_get_name (char name      [],
 
   }
 
-char *complete (char name [], char tail [])
+char *complete (char name [], const char tail [])
   {static char r [256];
 
    strcpy (r, name);

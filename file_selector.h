@@ -39,7 +39,7 @@ class file_selector
                        char file_pattern [],
                        bool must_exists = true);
 
-   file_selector      (char name [],
+   file_selector      (const char name [],
                        int  x,
                        int  y,
                        char full_file_name [],

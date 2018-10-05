@@ -46,7 +46,7 @@ class dial
      bool    with_edit;
 
    dial  (win  *w, 
-          char title [],
+          const char title [],
           int  title_dx,
           int  x, 
           int  y,
@@ -60,7 +60,7 @@ class dial
           int  incr2       = 0,
           bool auto_repeat = false);
    dial  (win  *w, 
-          char title [],
+          const char title [],
           int  title_dx,
           int  x, 
           int  y,

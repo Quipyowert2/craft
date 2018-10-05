@@ -16,7 +16,7 @@
 #define val_dy    20
 
 dial::dial (win  *p_w,
-            char p_title [],
+            const char p_title [],
             int  p_title_dx, 
             int  p_x,
             int  p_y,
@@ -95,7 +95,7 @@ dial::dial (win  *p_w,
 
 
 dial::dial (win  *p_w,
-            char p_title [],
+            const char p_title [],
             int  p_title_dx, 
             int  p_x,
             int  p_y,

@@ -27,10 +27,10 @@ menu::menu ()
   {
   }
 
-menu::menu (char w_name [],
+menu::menu (const char w_name [],
             int  w_x,
             int  w_y,
-            char w_cmds [],
+            const char w_cmds [],
             int  w_mode,
             int  menu_group)
 
@@ -53,8 +53,8 @@ menu::menu (char w_name [],
 
 .  load_colors
      {c_border_light = win_default_c ("menu_border_light");
-      c_border_dark  = win_default_c ("menu_border_dark");
       c_background   = win_default_c ("menu_background");
+      c_border_dark  = win_default_c ("menu_border_dark");
       c_foreground   = win_default_c ("menu_foreground");
      }.
 
@@ -363,7 +363,7 @@ void menu::release (int no)
    is_pressed [no] = false;
   }
 
-bool menu::get_cmd (char cmds [], int &p, char cmd [])
+bool menu::get_cmd (const char cmds [], int &p, char cmd [])
   {if   (eof)
         return false;
    else read_cmd;

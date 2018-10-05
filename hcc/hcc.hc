@@ -39,7 +39,7 @@ FILE *src;
 
 
 
-void f_open (FILE *&f, char name [], char mode [])
+void f_open (FILE *&f, const char name [], const char mode [])
   {f = fopen (name, mode);
    check_error;
 
@@ -74,7 +74,7 @@ char *substring (char s [], int from)
 
   }
 
-char *substring (char s [], int from, int to)
+char *substring (const char s [], int from, int to)
   {static bool is_init = false;
    static char *result;
 
@@ -147,7 +147,7 @@ void changeall (char s           [],
 
   }
  
-char *complete (char name [], char tail [])
+char *complete (char name [], const char tail [])
   {static char r [256];
 
    strcpy (r, name);

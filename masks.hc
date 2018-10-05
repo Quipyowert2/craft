@@ -67,11 +67,11 @@ void frame (win *w, int x1, int y1, int x2, int y2, int color_1, int color_2)
    w->line      (x1, y2, x1, y1);
   }
 
-bool yes (char question [])
+bool yes (const char question [])
   {return yes ("", question);
   }
 
-bool yes (char host [], char question [])
+bool yes (const char host [], const char question [])
   {win    *w;
    button *ok;
    button *no;
@@ -125,7 +125,7 @@ bool yes (char host [], char question [])
 
   }
 
-bool yes (win *parent, char host [], char question [])
+bool yes (win *parent, char host [], const char question [])
   {win    *w;
    button *ok;
    button *no;
@@ -183,7 +183,7 @@ void ack (char message [])
   {ack ("", message);
   }
 
-void ack (char host [], char message [])
+void ack (const char host [], char message [])
   {win    *w;
    button *ok;
    int    dx;
@@ -266,7 +266,7 @@ void tell (win *&w, char message [])
   {tell ("", w, message);
   }
 
-void tell (char host [], win *&w, char message [])
+void tell (const char host [], win *&w, char message [])
   {open_mask;
    tell_message;
 

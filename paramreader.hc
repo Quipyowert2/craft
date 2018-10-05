@@ -88,7 +88,7 @@ void paramreader::read_sym (char sym [], bool &is_eof)
   
   }
    
-paramreader::paramreader (char param_file_name [])
+paramreader::paramreader (const char param_file_name [])
   {bool is_eof = false;
 
    num_params = 0;
@@ -129,7 +129,7 @@ void paramreader::dump ()
      printf (">%s< = >%s<\n", name [i], value [i]);
   }
 
-int paramreader::param_no (char p_name [])
+int paramreader::param_no (const char p_name [])
   {for (int no = 0; no < num_params; no++)
      if (strcmp (name [no], p_name) == 0)
         return no;
@@ -138,7 +138,7 @@ int paramreader::param_no (char p_name [])
    return (0);
   }
 
-char * paramreader::s_param (char name [])
+char * paramreader::s_param (const char name [])
   {return value [param_no (name)];
   }
 
@@ -146,7 +146,7 @@ double paramreader::d_param (char name [])
   {return atof (value [param_no (name)]);
   }
 
-int paramreader::i_param (char name [])
+int paramreader::i_param (const char name [])
   {return atoi (value [param_no (name)]);
   }
 

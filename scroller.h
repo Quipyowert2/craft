@@ -39,7 +39,7 @@ class scroller
      button *button_incr;
      button *button_decr;
 
-     scroller  (char name [],
+     scroller  (const char name [],
                 win  *w,
                 int  x,
                 int  y,

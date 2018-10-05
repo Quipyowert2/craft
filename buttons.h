@@ -58,7 +58,7 @@ class button
      
 
      button (win  *b_w,
-             char b_label [],
+             const char b_label [],
              int  b_x,
              int  b_y,
              bool b_with_repeat = false,
@@ -76,7 +76,7 @@ class button
      void press (bool mode);
      bool eval  (int  &button);
      bool eval  ();
-     void write (char label_string []);
+     void write (const char label_string []);
      void write (char label_string [], bool is_pressed);
 
   };

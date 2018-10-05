@@ -140,7 +140,7 @@ class player
    void edit                ();
 
    void inform              (char msg []);
-   void write               (char msg []);
+   void write               (const char msg []);
 
    void load_pics           ();
 

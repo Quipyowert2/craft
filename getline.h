@@ -37,7 +37,7 @@ class getline
    bool    was_deactive;
    bool    is_single_char;
    
-   getline      (char name [],
+   getline      (const char name [],
                  win  *w,
                  char string [],
                  int  x,

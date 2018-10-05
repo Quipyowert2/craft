@@ -4,7 +4,7 @@
 #define bar_button_size 14
 #define bar_size        16
 
-scroller::scroller (char v_name [],
+scroller::scroller (const char v_name [],
                     win  *v_w,
                     int  v_x,
                     int  v_y,

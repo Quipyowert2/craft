@@ -39,7 +39,7 @@ FILE *src;
 
 
 
-void f_open (FILE *&f, char name [], char mode [])
+void f_open (FILE *&f, const char name [], const char mode [])
   {f = fopen (name, mode);
     /* check_error */      {if (mode [0] == 'r' && f == NULL)
          {printf ("1, FILE, file '%s' not found\n", name);
@@ -68,7 +68,7 @@ char *substring (char s [], int from)
 
   }
 
-char *substring (char s [], int from, int to)
+char *substring (const char s [], int from, int to)
   {static bool is_init = false;
    static char *result;
 
@@ -91,7 +91,7 @@ char *substring (char s [], int from, int to)
 
 void changeall (char s           [], 
                 int  max_length_of_s,
-                char tmplate     [],
+                const char tmplate     [],
                 char replacement [])
 
   {char *pos;
@@ -129,7 +129,7 @@ void changeall (char s           [],
 
   }
  
-char *complete (char name [], char tail [])
+char *complete (char name [], const char tail [])
   {static char r [256];
 
    strcpy (r, name);
@@ -175,7 +175,7 @@ void dump_line_cor ()
      };
   }
 
-void pass_1_error (int line_no, char msg [], int l)
+void pass_1_error (int line_no, const char msg [], int l)
   {char err_msg [256];
    char ii      [128];
 
@@ -187,7 +187,7 @@ void pass_1_error (int line_no, char msg [], int l)
    exit      (1);
   }
 
-void pass_1_error (int line_no, char msg [])
+void pass_1_error (int line_no, const char msg [])
   {fclose (src);
    printf ("error : %d : %s\n", line_no, msg);
    exit   (1);

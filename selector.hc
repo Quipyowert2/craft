@@ -10,7 +10,7 @@
 #define selector_marked_case_color    yellow 
 #define selector_unmarked_case_color  black
 
-selector::selector (char v_name [], 
+selector::selector (const char v_name [],
                     win  *v_w,
                     int  v_num_cases,
                     char v_case_string [max_selector_cases][128],

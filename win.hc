@@ -42,7 +42,7 @@ bool bitmap_size (char name [], int &dx, int &dy)
 /* ROUTINES text size information (deklarations)                        */
 /*----------------------------------------------------------------------*/
 
-void text_size (char s [], char font [], int &dx, int &dy, int &num_lines)
+void text_size (char s [], const char font [], int &dx, int &dy, int &num_lines)
   {XFontStruct *font_info;
    Display     *display;
 
@@ -125,31 +125,31 @@ void init_default_handler ()
 
   }
 
-int win_default_i (int param, char default_name [])
+int win_default_i (int param, const char default_name [])
   {init_default_handler ();
    if   (param != by_default)
         return param;
    else return win_default_i (default_name);
   }
 
-int win_default_i (char default_name [])
+int win_default_i (const char default_name [])
   {init_default_handler ();
    return win_defaults->i_param (default_name);
   }
 
-char *win_default_s (char default_name [])
+char *win_default_s (const char default_name [])
   {init_default_handler ();
    return win_defaults->s_param (default_name);
   }
 
-int win_default_c (int param, char default_name [])
+int win_default_c (int param, const char default_name [])
   {init_default_handler ();
    if   (param != by_default)
         return param;
    else return win_default_c (default_name);
   }
 
-int win_default_c (char default_name [])
+int win_default_c (const char default_name [])
   {char color_name [128];
 
    init_default_handler ();
@@ -263,8 +263,8 @@ bool win::fix_initialized = false;
 /* CLASS win (funktions)                                                */
 /*----------------------------------------------------------------------*/
 
-win::win (char title [],
-          char host  [],
+win::win (const char title [],
+          const char host  [],
           int  x,
           int  y, 
           int  dx,
@@ -512,7 +512,7 @@ win::win (char title [],
   }
 
 win::win (win  *parent,
-          char title [],
+          const char title [],
           char host  [],
           int  x,
           int  y, 
@@ -817,7 +817,7 @@ win::~win ()
 #undef green
 #undef blue
 
-void win::alloc_color (char name [], int no)
+void win::alloc_color (const char name [], int no)
   {Screen *src = ScreenOfDisplay (mydisplay, myscreen);
    XColor c;
    XColor d;
@@ -1753,7 +1753,7 @@ void win::shift (int x1, int y1, int x2, int y2, int dx, int dy)
 
   }
 
-void win::text_size (char string [], int &dx, int &dy)
+void win::text_size (const char string [], int &dx, int &dy)
   {if (is_enable)
       perform_get_size;
 
@@ -1767,7 +1767,7 @@ void win::text_size (char string [], int &dx, int &dy)
 
   }
 
-void win::set_font (char name [])
+void win::set_font (const char name [])
   {if (is_enable)
       perform_load;
 
@@ -1795,7 +1795,7 @@ void win::write (int x, int y, int d)
    write   (x, y, s);
   }
 
-void win::write (int x, int y, char string [])
+void win::write (int x, int y, const char string [])
   {if (is_enable)
       perform_write;
 

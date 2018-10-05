@@ -23,7 +23,7 @@ class cmap
    int         rot;
 
    cmap      (win  *w_i,
-              char name_i [],
+              const char name_i [],
               bool preload = true,
               bool smart_load = true);
    ~cmap     ();

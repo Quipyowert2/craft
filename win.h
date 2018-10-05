@@ -129,7 +129,7 @@ bool bitmap_size (char name [], int &dx, int &dy);
 /* ROUTINES text size information (deklarations)                        */
 /*----------------------------------------------------------------------*/
 
-void text_size (char s [], char font [], int &dx, int &dy, int &num_of_lines);
+void text_size (char s [], const char font [], int &dx, int &dy, int &num_of_lines);
 
 /*----------------------------------------------------------------------*/
 /* Default Handler (deklarations)                                       */
@@ -140,11 +140,11 @@ void text_size (char s [], char font [], int &dx, int &dy, int &num_of_lines);
 extern bool        win_handler_init;
 extern paramreader *win_defaults;
 
-int   win_default_i (int param, char default_name []);
-int   win_default_i (char default_name []);
-int   win_default_c (int param, char default_name []);
-int   win_default_c (char default_name []);
-char *win_default_s (char default_name []);
+int   win_default_i (int param, const char default_name []);
+int   win_default_i (const char default_name []);
+int   win_default_c (int param, const char default_name []);
+int   win_default_c (const char default_name []);
+char *win_default_s (const char default_name []);
 int   win_color     (char color_name   []);
 
 /*----------------------------------------------------------------------*/
@@ -243,8 +243,8 @@ class win
 
           win  (char title []);
 
-          win  (char title [],
-                char host  [],
+          win  (const char title [],
+                const char host  [],
                 int  x,
                 int  y, 
                 int  dx,
@@ -252,7 +252,7 @@ class win
                 bool enable        = true,
                 bool resize_enable = false);
           win  (win  *parent,
-                char title [],
+                const char title [],
                 char host  [],
                 int  x,
                 int  y, 
@@ -289,9 +289,9 @@ class win
      void   mark_mouse       ();
      void   scratch_mouse    ();
      void   clear            ();
-     void   set_font         (char name []);
-     void   text_size        (char string [], int &dx, int &dy);
-     void   write            (int x, int y, char   string []);
+     void   set_font         (const char name []);
+     void   text_size        (const char string [], int &dx, int &dy);
+     void   write            (int x, int y, const char   string []);
      void   write            (int x, int y, double d);
      void   write            (int x, int y, int    i);
      void   set_clip         (int x, int y, int dx, int dy);
@@ -332,7 +332,7 @@ class win
      int    dy               ();
      void   tick             (bool just_raised);
      void   tick             ();
-     void   alloc_color      (char name [], int no);
+     void   alloc_color      (const char name [], int no);
      void   create_color_map ();
      void   draw             (polyline *p);
      void   fill             (polyline *p);

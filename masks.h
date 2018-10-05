@@ -25,14 +25,14 @@ void frame      (win *w,
                  int dx, int dy, 
                  int color_1, int color_2);
 
-bool yes        (win *w, char host [], char question []);
-bool yes        (char host [], char question []);
-bool yes        (char question []);
-void ack        (char host [], char msg []);
+bool yes        (win *w, char host [], const char question []);
+bool yes        (const char host [], const char question []);
+bool yes        (const char question []);
+void ack        (const char host [], char msg []);
 void ack        (char message []);
 void tell       (win  *&w,
                  char message []);
-void tell       (char host [],
+void tell       (const char host [],
                  win  *&w,
                  char message []);
 void tell       (char host [],

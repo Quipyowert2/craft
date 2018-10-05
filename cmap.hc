@@ -2,7 +2,7 @@
 #include "cmap.h"
 #include "xbm.h"
  
-cmap::cmap (win *w_i, char name_i [], bool preload, bool smart_load)
+cmap::cmap (win *w_i, const char name_i [], bool preload, bool smart_load)
   {w              = w_i;
    is_mask        = false;
    is_loaded      = false;

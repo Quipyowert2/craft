@@ -56,13 +56,13 @@ class paramreader
      int  num_includes;
 
 
-          paramreader (char *param_file_name);
+          paramreader (const char *param_file_name);
 
    void   dump       ();
-   char * s_param    (char name []);
+   char * s_param    (const char name []);
    double d_param    (char name []);
-   int    i_param    (char name []);
-   int    param_no   (char name []);
+   int    i_param    (const char name []);
+   int    param_no   (const char name []);
    void   set        (char name [], char value []);
    void   read_sym   (char sym  [], bool &is_eof);
    int    max_i_name ();

@@ -12,7 +12,7 @@
 #include "win.h"
 
 button::button (win  *b_w,
-                char b_label [],
+                const char b_label [],
                 int  b_x,
                 int  b_y,
                 bool b_with_repeat,
@@ -179,7 +179,7 @@ bool button::eval (int &button)
 
   }
 
-void button::write (char label_string [])
+void button::write (const char label_string [])
   {strcpy (label, label_string);
    write  (label, is_pressed);
   }

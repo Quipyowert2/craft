@@ -93,10 +93,10 @@ class menu
   
 
       menu ();
-      menu (char name [],
+      menu (const char name [],
             int  x,
             int  y,
-            char cmds [],
+            const char cmds [],
             int  wmode = m_pop_up,
             int  menu_group = std_menu_group);
 
@@ -112,7 +112,7 @@ class menu
      void release      ();
      void release      (int no);
      void write        (int m_no, char string [], bool pressed = false);
-     bool get_cmd      (char cmds [], int &p, char cmd []);
+     bool get_cmd      (const char cmds [], int &p, char cmd []);
      
   };
 
