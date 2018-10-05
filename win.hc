@@ -1029,7 +1029,8 @@ void win::tick (bool pause)
       d                    = XLookupString ((XKeyEvent*) &myevent,
                                              instring, 10, &mykey, 0);
       act_key              = ((XButtonPressedEvent *) &myevent)->button;
-      strcpy (cntlbuffer [keycount], XKeysymToString (mykey));
+      if (XKeysymToString(mykey))
+        strcpy (cntlbuffer [keycount], XKeysymToString (mykey));
      }.
 
 .  perhaps_skip_shift
