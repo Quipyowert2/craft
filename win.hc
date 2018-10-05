@@ -1909,12 +1909,14 @@ int win::x ()
       Window            *dd [100];
       Window            d;
       unsigned int      di;
-      Window            par;
+      Window            par = mywindow;
 
       XQueryTree (mydisplay, mywindow, &d, &parent, &dd [0], &di);
-      par  = parent;
-      XQueryTree (mydisplay, par, &d, &parent, &dd [0], &di);
-      XGetWindowAttributes (mydisplay, parent, &attr);
+      while (parent)
+        {par = parent;
+         XQueryTree(mydisplay, par, &d, &parent, &dd [0], &di);
+        }
+      XGetWindowAttributes (mydisplay, par, &attr);
       return attr.x;
      }.
 
@@ -1931,12 +1933,14 @@ int win::y ()
       Window            *dd [100];
       Window            d;
       unsigned int      di;
-      Window            par;
+      Window            par = mywindow;
 
       XQueryTree (mydisplay, mywindow, &d, &parent, &dd [0], &di);
-      par  = parent;
-      XQueryTree (mydisplay, par, &d, &parent, &dd [0], &di);
-      XGetWindowAttributes (mydisplay, parent, &attr);
+      while (parent)
+        {par = parent;
+         XQueryTree(mydisplay, par, &d, &parent, &dd [0], &di);
+        }
+      XGetWindowAttributes (mydisplay, par, &attr);
       return attr.y;
      }.
 
