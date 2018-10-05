@@ -56,7 +56,7 @@ char *substring (char s [], int from)
    static char *result;
 
     /* perhaps_delete_old_result */      {if (is_init)
-         delete (result);
+         delete[] (result);
      };
     /* calc_new_result */      {result  = new char [strlen (s) - from + 2];
       is_init = true;
@@ -73,7 +73,7 @@ char *substring (const char s [], int from, int to)
    static char *result;
 
     /* perhapss_delete_old_result */      {if (is_init)
-         delete (result);
+         delete[] (result);
      };
     /* calcc_new_result */      {int i;
 

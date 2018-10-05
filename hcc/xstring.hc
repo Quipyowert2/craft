@@ -138,7 +138,7 @@ char *substring (char s [], int from)
 
 .  perhaps_delete_old_result
      {if (is_init)
-         delete (result);
+         delete[] (result);
      }.
 
 .  calc_new_result
