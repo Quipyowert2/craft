@@ -1,3 +1,4 @@
+#undef bool
 #include "float.h"
 #include "stdio.h"
 #include "math.h"
