@@ -1,3 +1,4 @@
+#include "stdlib.h"
 #include "cry.h"
 
 void cry (char *func_name)
