@@ -112,7 +112,7 @@ ppm::ppm (char name [], bool with_cache)
      char buffer [1024];
 
      get_a_line;
-     sscanf (buffer, "%s", type);
+     sscanf (buffer, "%127s", type);
      check_type;
      get_a_line;
      sscanf (buffer, "%d %d", &dx, &dy);

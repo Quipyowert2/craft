@@ -392,7 +392,7 @@ void get_file_list (const char pattern [],
      }.
 
 .  another_name
-     (fscanf (l_file, "%s", f_line) != EOF && 
+     (fscanf (l_file, "%1023s", f_line) != EOF &&
       num_files < max_cmap_selector_cases).
 
 .  store_name

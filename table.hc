@@ -250,7 +250,7 @@ void table::load ()
      }.
 
 .  load_column
-     {fscanf (f, "%s %d %d %d\n", 
+     {fscanf (f, "%127s %d %d %d\n",
               column_name  [i],
               &column_type  [i],
               &column_size  [i],
@@ -385,7 +385,7 @@ void table::load ()
 .  read_text
      {char t [128];
 
-      fscanf (f, "%s ", t);
+      fscanf (f, "%127s ", t);
       write  (row_no, j, t);
      }.
 

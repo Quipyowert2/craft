@@ -18,7 +18,7 @@ bool ppm_size (char name [], int &dx, int &dy, int &color)
       char type [128]; 
 
       f = fopen (name, "r");
-      fscanf (f, "%s %d %d %d", type, &dx, &dy, &color);
+      fscanf (f, "%127s %d %d %d", type, &dx, &dy, &color);
       fclose (f);
       return (strcmp (type, "P6") == 0);
      }.

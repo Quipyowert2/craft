@@ -36,8 +36,8 @@ xbm::xbm (char name [])
 .  get_size
     {char d [128];
 
-     fscanf (xbm_data, "%s %s %d", d, d, &dx);
-     fscanf (xbm_data, "%s %s %d", d, d, &dy);
+     fscanf (xbm_data, "%127s %127s %d", d, d, &dx);
+     fscanf (xbm_data, "%127s %127s %d", d, d, &dy);
      skip_line;
      skip_line;
     }.
@@ -75,7 +75,7 @@ xbm::xbm (char name [])
 .  get_new_b
      {char bb [128];
 
-      fscanf (xbm_data, "%s", bb);
+      fscanf (xbm_data, "%127s", bb);
       b = hextoint (substring (bb, 2));
      }.
 

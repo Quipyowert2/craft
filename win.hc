@@ -30,8 +30,8 @@ bool bitmap_size (char name [], int &dx, int &dy)
       char d [128];
 
       f = fopen (name, "r");
-      fscanf (f, "%s %s %d", d, d, &dx);
-      fscanf (f, "%s %s %d", d, d, &dy);
+      fscanf (f, "%127s %127s %d", d, d, &dx);
+      fscanf (f, "%127s %127s %d", d, d, &dy);
       fclose (f);
       return true;
      }.

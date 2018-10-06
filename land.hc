@@ -1164,7 +1164,7 @@ void load_land_props ()
 .  load_info
      {char d [128];
 
-      fscanf (infos, "%d %d %d %d %d %d %d %d %s",
+      fscanf (infos, "%d %d %d %d %d %d %d %d %127s",
               &land_properties [lno].overview_color,
               &land_properties [lno].walk_possible,
               &land_properties [lno].with_hl,

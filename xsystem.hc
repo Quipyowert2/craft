@@ -36,7 +36,7 @@ int batch (char cmd [])
       char d [128];
 
       f = fopen (temp_file_name, "r");
-      fscanf (f, "%s %d", d, &job_no);
+      fscanf (f, "%127s %d", d, &job_no);
       fclose (f);
      }.
  

@@ -55,7 +55,7 @@ void paramreader::read_sym (char sym [], bool &is_eof)
      (sym [0] == '#' && strcmp (sym, "#include") != 0).
 
 .  get_sym
-     fscanf (act_f, "%s", sym).  
+     fscanf (act_f, "%79s", sym).
 
 .  act_f
      f [num_includes - 1].

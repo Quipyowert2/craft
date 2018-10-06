@@ -205,7 +205,7 @@ void file_selector::get_file_list ()
      }.
 
 .  another_name
-     (fscanf (l_file, "%s", f_line) != EOF).
+     (fscanf (l_file, "%1023s", f_line) != EOF).
 
 .  store_name
      {strcpy (act_f_name, f_tail (f_line));
@@ -310,7 +310,7 @@ bool file_selector::eval (char full_name [])
                getenv ("PWD"));
       system  (cmd);
       f = fopen ("filesel.temp", "r");
-      fscanf    (f, "%s", file_name);
+      fscanf    (f, "%255s", file_name);
       strcat    (file_name, "/");
       fclose    (f);
      }.
