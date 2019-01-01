@@ -376,7 +376,7 @@ int select (char menu_string [], char *name)
    perform_select;
    adjust_selected;
    delete (m);
-   delete (m_string);
+   delete[] (m_string);
    return selected;
 
 .  complete_m_string
