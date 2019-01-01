@@ -506,7 +506,7 @@ void set_initial_objects ()
                  
   }
 
-main (int num_params, char *shell_params [])
+int main (int num_params, char *shell_params [])
   {double act_speed;
 
    start_message;

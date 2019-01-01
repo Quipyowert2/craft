@@ -1307,7 +1307,7 @@ void pass_3 (char src_name [])
 
   }
 
-main (int num_params, char *shell_params [])
+int main (int num_params, char *shell_params [])
   {char gcc_exec [256];
    char src_name [256];
    char options  [256];
