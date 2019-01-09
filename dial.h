@@ -35,7 +35,7 @@ class dial
 
      int  val_dx;
 
-     getline *g_value;
+     craft_getline *g_value;
      button  *up;
      button  *down;
      button  *up2;

@@ -68,7 +68,7 @@ player::player (int    pno,
 .  open_w_msg
      {w_msg = new win     (w_craft, "msg", host, 0,
                            w_craft_dy - w_msg_dy, w_msg_dx, w_msg_dy);
-      g_msg = new getline ("msg", w_msg, message, 1, 1,
+      g_msg = new craft_getline ("msg", w_msg, message, 1, 1,
                            w_msg_dx-2, w_msg_dy-2, false, false, true);
      }.
 

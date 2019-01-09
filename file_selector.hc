@@ -60,10 +60,10 @@ file_selector::file_selector (const char p_name [],
      }.
 
 .  open_getlines
-     {get_name    = new getline ("get_name", w, file_name,
+     {get_name    = new craft_getline ("get_name", w, file_name,
                                  name_x, name_y, name_dx, name_dy,
                                  true);
-      get_pattern = new getline ("get_pattern", w, file_pattern,
+      get_pattern = new craft_getline ("get_pattern", w, file_pattern,
                                  pattern_x, pattern_y, pattern_dx, pattern_dy,
                                  true);
      }.
@@ -115,10 +115,10 @@ file_selector::file_selector (char p_name [],
      }.
 
 .  open_getlines
-     {get_name    = new getline ("get_name", w, file_name,
+     {get_name    = new craft_getline ("get_name", w, file_name,
                                  name_x, name_y, name_dx, name_dy,
                                  true);
-      get_pattern = new getline ("get_pattern", w, file_pattern,
+      get_pattern = new craft_getline ("get_pattern", w, file_pattern,
                                  pattern_x, pattern_y, pattern_dx, pattern_dy,
                                  true);
      }.

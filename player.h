@@ -24,7 +24,7 @@ class player
 
    color_trans *ct [max_players];
 
-   getline *g_msg;
+   craft_getline *g_msg;
  
    int    wdx;
    int    wdy;

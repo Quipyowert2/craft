@@ -6,7 +6,7 @@
 #include "buttons.h"
 #include "bool.h"
 
-class getline
+class craft_getline
   {public:
 
    win     *w;
@@ -37,18 +37,18 @@ class getline
    bool    was_deactive;
    bool    is_single_char;
    
-   getline      (const char name [],
-                 win  *w,
-                 char string [],
-                 int  x,
-                 int  y,
-                 int  dx,
-                 int  dy,
-                 bool with_history     = false,
-                 bool show_histroy_top = false,
-                 bool single_char      = false);
+   craft_getline      (const char name [],
+                       win  *w,
+                       char string [],
+                       int  x,
+                       int  y,
+                       int  dx,
+                       int  dy,
+                       bool with_history     = false,
+                       bool show_histroy_top = false,
+                       bool single_char      = false);
 
-   ~getline     ();
+   ~craft_getline     ();
 
    bool on               ();
    void check_activation ();

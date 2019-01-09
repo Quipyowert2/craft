@@ -185,7 +185,7 @@ void main_menu (int act_menu, int &tic)
   {dial    *d_is_self;
    dial    *d_is_suny;
    dial    *d_water_world;
-   getline *seed;
+   craft_getline *seed;
    char    seed_s [128];
 
    init;
@@ -217,7 +217,7 @@ void main_menu (int act_menu, int &tic)
       d_is_suny     = new dial (w, "", 0,200, 140,is_suny);
       d_water_world = new dial (w, "", 0,200, 180,is_water_world);
       strcpy (seed_s, "");
-      seed = new getline ("", w, seed_s, 200, 250, 90, 24);
+      seed = new craft_getline ("", w, seed_s, 200, 250, 90, 24);
      }.
 
 .  finish
@@ -270,8 +270,8 @@ void main_menu (int act_menu, int &tic)
   }
 
 void player_menu (int act_menu, int &tic)
-  {getline  *g_host;
-   getline  *g_name;
+  {craft_getline  *g_host;
+   craft_getline  *g_name;
 
    init;
    session;
@@ -298,8 +298,8 @@ void player_menu (int act_menu, int &tic)
      }.
 
 .  show_buttons
-     {g_host  = new getline  ("",w, host [pno],60,160,180, 20);
-      g_name  = new getline  ("",w, name [pno],60,230,180, 20);
+     {g_host  = new craft_getline  ("",w, host [pno],60,160,180, 20);
+      g_name  = new craft_getline  ("",w, name [pno],60,230,180, 20);
      }.
 
 .  finish

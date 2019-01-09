@@ -330,7 +330,7 @@ bool get_line (char s    [],
                bool with_history)
  
   {win     *w;
-   getline *gl;
+   craft_getline *gl;
    button  *cancel;
    bool    is_cancel;
 
@@ -342,7 +342,7 @@ bool get_line (char s    [],
 .  open_win
      {w      = new win (name, "", 100, 100, dx + 40, 80);
       background (w);
-      gl     = new getline (name, w, s, 20, 20, dx, 20, with_history);
+      gl     = new craft_getline (name, w, s, 20, 20, dx, 20, with_history);
       cancel = new button (w, "cancel", (dx+40) / 2 - 60, 50);
      }.
 

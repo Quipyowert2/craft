@@ -58,7 +58,7 @@ dial::dial (win  *p_w,
      }.
 
 .  show_buttons
-     {g_value = new getline ("dial", w, s_value,
+     {g_value = new craft_getline ("dial", w, s_value,
                              x + title_dx, y,
                              val_dx, val_dy); 
       up   = new button (w, "/dial.up", 

@@ -4,16 +4,16 @@
 
 #define hist_button_name         "/hist.open"
 
-getline::getline (const char v_name   [],
-                  win  *v_w,        
-                  char v_string [], 
-                  int  v_x,         
-                  int  v_y,         
-                  int  v_dx,        
-                  int  v_dy,
-                  bool v_with_history,
-                  bool show_history_top,
-                  bool single_char)
+craft_getline::craft_getline (const char v_name   [],
+                              win  *v_w,
+                              char v_string [],
+                              int  v_x,
+                              int  v_y,
+                              int  v_dx,
+                              int  v_dy,
+                              bool v_with_history,
+                              bool show_history_top,
+                              bool single_char)
             
   {store_params;
    get_colors;
@@ -87,14 +87,14 @@ getline::getline (const char v_name   [],
 
   }
 
-getline::~getline ()
+craft_getline::~craft_getline ()
   {if (with_history)
       {delete (hist_button);
        delete (hist);
       };
   }
 
-void getline::refresh ()
+void craft_getline::refresh ()
   {int cx;
    int dl;
    int d;
@@ -148,7 +148,7 @@ void getline::refresh ()
 
   }
 
-void getline::check_activation ()
+void craft_getline::check_activation ()
   {int d;
 
    w->tick ();
@@ -156,7 +156,7 @@ void getline::check_activation ()
       active (on ());
   }
 
-bool getline::on ()
+bool craft_getline::on ()
   {int xm;
    int ym;
    int button;
@@ -171,12 +171,12 @@ bool getline::on ()
 
   }
 
-void getline::active (bool mode)
+void craft_getline::active (bool mode)
   {was_deactive = (is_active && ! mode);
    is_active    = mode;
   }
 
-bool getline::eval ()
+bool craft_getline::eval ()
   {check_activation ();
    check_hist_button;
    if (was_deactive)
@@ -341,7 +341,7 @@ bool getline::eval ()
 
   }
 
-bool getline::get ()
+bool craft_getline::get ()
   {bool any_edit;
 
    eval ();

@@ -16,8 +16,8 @@ class file_selector
    win      *w;
 
    selector *sel;
-   getline  *get_name;
-   getline  *get_pattern;
+   craft_getline  *get_name;
+   craft_getline  *get_pattern;
 
    int      num_files;
    char     file_list [max_selector_cases][128];
