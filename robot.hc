@@ -118,6 +118,13 @@ robot::robot (int my_color, int my_pno)
 
 robot::~robot ()
   {
+   if (ilf)
+   {
+      delete ilf;
+   }
+   delete ppf;
+   delete pf;
+   delete f;
   }
 
 int other_home (int h)

@@ -286,6 +286,9 @@ void player::initial_display ()
 
 player::~player ()
   {
+   if (rob)
+      {delete rob;
+      }
   }
 
 void player::deactivate ()
