@@ -290,8 +290,8 @@ win::win (const char title [],
 .  perform_open
      {char                 full_title [128] = "win:";
       char                 full_host  [128];
-      int                  argc;
-      char                 **argv;
+      int                  argc = 0;
+      char                 **argv = NULL;
       XSetWindowAttributes new_attr;
 
       init_mouse;
@@ -539,8 +539,8 @@ win::win (win  *parent,
 .  perform_open
      {char                 full_title [128] = "win:";
       char                 full_host  [128];
-      int                  argc;
-      char                 **argv;
+      int                  argc = 0;
+      char                 **argv = NULL;
       XSetWindowAttributes new_attr;
 
       init_mouse;
